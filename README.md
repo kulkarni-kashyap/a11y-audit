@@ -1,9 +1,9 @@
 # a11y-audit
-Performs a quick accessibility audit for a given url by spinning up the local server if required built on top of `@axe-core/cli`.
+Conducts a quick accessibility audit for a given url by spinning up the local server if required built on top of `@axe-core/cli`.
 
 ## Install
 ```
-npm i -g perform-a11y-audit
+npm i -g conduct-a11y-audit
 ```
 
 ## Pre-requisites
@@ -18,4 +18,4 @@ a11y-audit <options>
 a11y-audit -u https://github.com/ -s false -t wcag2a,wcag2aa -b chrome --save results.json -o rules color-contrast,html-has-lang
 ```
 
-This will perform accessibility test on github.com to check wcag2a and wcag2aa standards on chrome and saves results to results.json in current working directory.
+This will conduct accessibility test on github.com to check wcag2a and wcag2aa standards on chrome and saves results to results.json in current working directory.

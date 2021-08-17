@@ -1,7 +1,7 @@
 {
-  "name": "perform-a11y-audit",
+  "name": "conduct-a11y-audit",
   "version": "1.0.0",
-  "description": "A simple node cli tool built on top of axe-cli to perform quick a11y audit.",
+  "description": "A simple node cli tool built on top of axe-cli to conduct quick a11y audit.",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
