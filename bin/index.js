@@ -10,17 +10,18 @@ const chalk = require("chalk");
 
 
 const options = yargs
- .usage(chalk.bold.green("Usage: a11y-audit -u <url> -s <shouldStartDevServer> -t <tags> -save <save> -b <browser>"))
+ .usage(chalk.bold.green("Usage: a11y-audit -u <url> -s <should-start-DevServer> -ss <start-script-name> -t <tags> -save <path-to-file> -b <browser>"))
  .option("u", { alias: "url", describe: "url to test", type: "string", demandOption: true })
  .option("s", { alias: "shouldStartDevServer", describe: "should start dev server", type: 'boolean', demandOption: false, default: true})
+ .option("ss", { alias: "startScript", desc: "Name of the start script", type: "string", demandOption: false})
  .option("t", { alias: "tags", describe: "tags to test against", type: 'string', demandOption: false, default: 'wcag2aa' })
  .option("save", { alias: "saveResults", describe: "path to file to save results", type: "string", demandOption: false })
  .option("b", { alias: "browser", describe: "browser, defaults to headless chrome", type: "string", demandOption: false })
  .option("o", { alias: "other", describe: "other flags to be passed as space seperated", type: "array", demandOption: false})
  .argv;
 
-if (options.s) {
-    execSync("pm2 --name HelloWorld start npm -- start");
+if (options.shouldStartDevServer) {
+    execSync(`pm2 --name HelloWorld start npm -- run ${options.startScript}`);
 }
 
 let otherFlags = '';
