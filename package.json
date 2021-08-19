@@ -1,6 +1,6 @@
 {
   "name": "conduct-a11y-audit",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple node cli tool built on top of axe-cli to conduct quick a11y audit.",
   "main": "bin/index.js",
   "scripts": {
