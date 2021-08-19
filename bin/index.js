@@ -23,7 +23,7 @@ const options = yargs
 
 if (options.shouldStartDevServer) {
     execSync(`pm2 --name HelloWorld start npm -- run ${options.startScript}`);
-    sleep.sleep(10);
+    sleep.sleep(10); //TODO: Replace with wait-on instead of explicit sleep
 }
 
 let otherFlags = '';
