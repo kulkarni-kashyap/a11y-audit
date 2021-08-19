@@ -2,6 +2,7 @@
 const yargs = require("yargs");
 const { execSync } = require("child_process");
 const chalk = require("chalk");
+const sleep = require('sleep');
 
 
 //TODO: Handle this better
@@ -22,6 +23,7 @@ const options = yargs
 
 if (options.shouldStartDevServer) {
     execSync(`pm2 --name HelloWorld start npm -- run ${options.startScript}`);
+    sleep(10);
 }
 
 let otherFlags = '';
